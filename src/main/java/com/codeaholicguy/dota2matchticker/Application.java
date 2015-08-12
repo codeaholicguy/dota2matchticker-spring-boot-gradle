@@ -1,6 +1,5 @@
 package com.codeaholicguy.dota2matchticker;
 
-import com.codeaholicguy.dota2matchticker.job.GosuGamersParsingJob;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
