@@ -1,0 +1,37 @@
+group 'com.codeaholicguy'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.codeaholicguy.dota2matchticker.Application'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    compile 'org.springframework.boot:spring-boot-starter-web:1.2.5.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-freemarker:1.2.5.RELEASE'
+    compile 'org.springframework:spring-context-support:4.2.0.RELEASE'
+    compile 'org.jsoup:jsoup:1.7.2'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'net.sf.ehcache:ehcache:2.10.0'
+
+}
